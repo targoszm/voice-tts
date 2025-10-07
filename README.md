@@ -140,6 +140,19 @@ This script allows you to speak a single phrase with one or more voices.
 ```shell
 python tortoise/do_tts.py --text "I'm going to speak this" --voice random --preset fast
 ```
+
+### Gradio demo app
+
+If you prefer a small web UI, install the optional dependency and launch the bundled
+Gradio application:
+
+```shell
+pip install gradio
+python -m app.gradio_app
+```
+
+The interface exposes text, preset and voice selectors and plays the generated audio in
+your browser. The first run may take a few minutes while the Tortoise models download.
 ### do socket streaming
 ```socket server
 python tortoise/socket_server.py 
